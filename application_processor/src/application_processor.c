@@ -434,6 +434,15 @@ void attempt_boot() {
     // Boot
     boot();
 }
+#include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+#define MAX_INPUT_LENGTH 49
+#define OPERATION_DELAY_MS 3000
+#define MAX_ATTEMPTS 3
+
+static uint32_t attempt_count = 0;
 
 // Replace a component if the PIN is correct
 void attempt_replace() {
